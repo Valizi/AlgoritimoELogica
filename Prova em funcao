@@ -1,0 +1,123 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		caracter continue = ' '
+		
+faca{
+               limpa()
+			escreva("**MENU SELEÇÃO**")
+		     inteiro num1
+		     escreva("\n1-Meses...")
+		     escreva("\n2-Imc...")
+	      	escreva("\n3-Salario...")
+               escreva("\nQual programa deseja acessar?:")
+		     leia(num1)
+		     se(num1 == 1){
+			 meses()
+		     }
+		     se(num1 == 2){
+		     	imc()
+		     }
+		     se(num1 == 3){
+		     	salario()
+		     }
+			escreva("\n\nDeseja continuar ao menu inicial?(s para sim)")
+			leia(continue)
+			
+		}
+		enquanto(continue == 's')
+		
+		
+	}
+
+	funcao meses(){
+		 inteiro mes 
+	          escreva ("\nDigite o numero do mes do ano ou 15 para finalizar\n: ")
+		     leia (mes)
+		     escolha(mes){
+		     caso 1:
+		            escreva("\nJaneiro")
+		            pare
+		     caso 2:
+		            escreva("\nFevereiro")
+		            pare
+		     caso 3:
+		            escreva("\nMarço")
+		            pare 
+		     caso 4:
+		            escreva("\nAbril")
+		            pare
+		     caso 5:
+		            escreva("\nMaio")
+		            pare
+		     caso 6:
+		            escreva("\nJunho")
+		            pare 
+		     caso 7:
+		            escreva("\nJulho")
+		            pare 
+		     caso 8:
+		            escreva("\nAgosto")
+		            pare
+		     caso 9:
+		            escreva("\nSetembro")
+		            pare 
+	          caso 10:
+		            escreva("\nOutubro")
+		            pare        	
+		     caso 11:
+		            escreva("\nNovembro")
+		            pare
+		     caso 12:
+		            escreva("\nDezembro")
+		            pare  			
+		     caso 15:
+		            escreva("\nO programa sera finalizado!")
+		            pare	
+		     caso contrario:
+		            escreva("\nOpção invalida\n\n")
+	     }
+        }
+
+        funcao salario(){
+        	  real slo, emp1, tlemp, tdesc, liq, bruto = 0.0
+		  real vltrans = 300.0
+	       real emp2 = 0.0
+		  escreva("\n Informar valor bruto: ")
+            leia(slo)
+            bruto = slo
+            emp1 = slo * 0.10
+            slo = slo - emp1
+            escreva("Empresltimo 1: ", emp1)
+            emp2 = slo * 0.20
+            se (emp2 >= vltrans) {
+		     emp2 = slo * 0.15	
+			escreva("\n2 empréstimo.....: ", emp2)
+	       }
+		  senao {
+			 emp2 = slo * 0.20
+		      escreva("\n2 empréstimo....: ", emp2) 
+		  }
+		  tlemp = emp1 + emp2
+		  escreva("\nTotal empréstimos.....: ", tlemp)
+	       slo = slo - vltrans
+		  escreva("\nTotal de Transportes..: ", vltrans)
+            tdesc = tlemp + vltrans
+	       escreva("\nTotal de Descontos....: ", tdesc)
+            liq = bruto - tdesc
+	       escreva("\nSalário Líquido.......: ", liq)
+        }
+
+        funcao imc(){
+        	real peso, pesodez, pesovinte
+		escreva ("\n Digite seu peso!\n")
+		leia(peso)
+          pesodez = peso + (peso * 0.10)
+          escreva ("Seu peso + 10% equivale ha:", pesodez)
+		pesovinte = peso + (peso * 0.20)
+		escreva("\nSeu peso + 20% equivale ha:", pesovinte,"\n")
+        }
+
+}

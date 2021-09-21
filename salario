@@ -1,0 +1,65 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		caracter continua = 's'
+		escreva("\n * * * Calcular salario * * *\n")
+	 	
+	 	
+		faca
+		{
+			real slo, emp1, tlemp, tdesc, liq, bruto = 0
+		real vltrans = 300.0
+	real emp2 = 0
+			
+			
+				
+				escreva("\n Informar valor bruto: ")
+				
+					leia(slo)
+				
+						bruto = slo
+
+				
+				emp1 = slo * 0.10
+				
+					slo = slo - emp1
+				
+				escreva("Empresltimo 1: ", emp1)
+				
+					emp2 = slo * 0.20
+				
+					se (emp2 >= vltrans) {
+						emp2 = slo * 0.15
+						
+				escreva("\n2 empréstimo.....: ", emp2)
+					}
+					senao {
+						emp2 = slo * 0.20
+					
+				escreva("\n2 empréstimo....: ", emp2) 
+					}
+					
+				tlemp = emp1 + emp2
+					escreva("\nTotal empréstimos.....: ", tlemp)
+				
+				slo = slo - vltrans
+					escreva("\nTotal de Transportes..: ", vltrans)
+
+				tdesc = tlemp + vltrans
+					escreva("\nTotal de Descontos....: ", tdesc)
+
+				liq = bruto - tdesc
+					escreva("\nSalário Líquido.......: ", liq)
+
+				
+			
+			escreva(" \nContinua a execução? ")
+						leia(continua)
+		}
+		
+		enquanto (continua == 'S' ou continua == 's')
+			escreva("O programa finalizado")		
+	}
+}

@@ -1,0 +1,35 @@
+programa
+{
+	
+	funcao inicio()
+	
+	{
+	
+	caracter continua = 's'
+		
+		faca
+		
+		{
+		real peso, pesodez, pesovinte
+
+		escreva ("\n Digite seu peso!\n")
+		leia(peso)
+
+		     pesodez = peso + (peso * 0.10)
+			
+			escreva ("\nSeu peso + 10% equivale ha:", pesodez)
+
+			pesovinte = peso + (peso * 0.20)
+			
+			escreva("\nseu peso + 20% equivale ha:", pesovinte)
+			
+		
+	
+	escreva("\nDeseja continuar?\n")
+	leia(continua)
+	   
+	   }
+	   
+	enquanto (continua == 's')
+	}
+}
