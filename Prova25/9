@@ -1,0 +1,129 @@
+programa
+{
+	inclua biblioteca Util --> u
+	inteiro num[10], numdigit = 0
+	caracter continua = 's'
+	
+	funcao inicio()
+{
+			
+			
+			para(inteiro x=0; x<10; x++){
+				num[x] = u.sorteia(1, 20)
+				escreva(x+1, "Numeros Sorteados:",num[x], "\n")
+								   }
+				   
+
+		
+				escreva("Menu de opções\n")
+				escreva("Selecione de 1 a 5, ou 9 para finalizar\n")
+				escreva("Somar Pares\n")
+				escreva("Somar impares\n")
+				escreva("somar entre 6 e 14\n")
+				escreva("Gerar numeros na ordem inversa\n")
+				escreva("Gerar numeros, copiar valores\n")
+				escreva("Finalizar\n")
+				
+			faca{
+
+				leia(numdigit)
+
+							se(numdigit == 1){
+						somaP()
+									}
+					  se(numdigit == 2){
+              			  somaI()
+          			  }
+         		   se(numdigit == 3){
+              		  somaM()
+        	    }
+        	    se(numdigit == 4){
+        	    	numI()
+        	    }
+        	 se(numdigit == 5){
+         	numD()
+        	    }   
+        	     se(numdigit == 9){
+         	continua = 't'
+        	     }
+        	    
+								
+			}
+		
+		 
+			enquanto(continua == 's')
+	}
+
+	
+			funcao somaP(){
+				  inteiro somaP = 0
+		escreva("Soma Pares\n:")
+		escreva("Os numeros pares sao:")		  
+		        para(inteiro x=0; x<10; x++){
+		            se(num[x]%2 == 0){ 
+		                somaP += num[x]
+		                escreva(num[x], " ")
+		            }
+		        }
+		
+		        escreva("\nA soma dos números pares é: ",somaP, "\n")
+			}
+	 
+					 
+					 funcao somaI(){
+				         inteiro somaI = 0
+				     escreva("Soma Impares\n:")
+					escreva("Os numeros Impares sao:")
+				        para(inteiro x=0; x<10; x++){
+				            se(num[x]%2 == 1){ 
+				                somaI += num[x]
+				                escreva(num[x], " ")
+				            }
+				        }
+				
+				        escreva("A soma dos números impares é: ",somaI,"\n")
+				    }
+
+				    
+						     funcao somaM(){
+						        inteiro somaM = 0
+						        para(inteiro x=0; x<10; x++){
+						            se(num[x]>=6 e num[x]<=14){
+						                somaM+= num[x]
+						            }
+						
+						        }
+							   
+						    }
+						    
+			  funcao numI(){
+			        inteiro inverso[10]
+			        inteiro indiceInverso = 9
+			        para(inteiro x=0; x<10; x++){ 
+			            inverso[indiceInverso] = num[x]
+			            indiceInverso--
+			        }
+			        escreva("\nVetores na ordem inversa\n")
+			        para(inteiro x=0; x<10; x++){ 
+			            escreva(inverso[x],"\n")
+			        }
+			
+			    }
+		  
+		        funcao numD(){
+		        inteiro numD[10]
+		        para(inteiro x=0; x<10; x++){
+		            numD[x] = num[x]
+		            para(inteiro y=x-1; y>0; y--){
+		                se(numD[y] == numD[x]){
+		                    numD[x] = 0
+                }
+            }
+        }
+         escreva("\nNumeros com repetição = 0\n")
+         para(inteiro x=0; x<10; x++){ 
+              escreva(numD[x],"\n")
+         }
+
+    }
+}
